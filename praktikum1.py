@@ -5,7 +5,7 @@ from colorama import Fore, Style
 print(Fore.WHITE)
 print(""" 
 +==========================================================================+
- __      ____               _   _   _______   _   _   _   _    _   _      _ 
+ __     ____               _   _   _______   _   _   _   _    _   _      _ 
 | _ \  |  _ \      /\     | | / / |__   __| | | | | / / | |  | | | \    / |
 ||_| | | |_| |    /  \    | |/ /     | |    | | | |/ /  | |  | | |  \  /  |
 | _ /  |    /    / /\ \   |   /      | |    | | |   /   | |  | | |   \/   |
@@ -32,12 +32,12 @@ error = 0 #digunakan untuk menghitung kesalahan exception
 def printAngkaGanjil(angka) :
     jumlah = 0
     print("o-----------o")
-    for i in range(angka) :
+    for i in range(angka+1) :
         if i % 2 != 0 :
             print("| Angka ",i," |")
             jumlah = jumlah + i
    
-        if i == (angka-1) :
+        if i == angka :
             print("o-----------o")
             print(Fore.LIGHTRED_EX +"Jumlah Keseluruhan Angka Ganjil : ",jumlah)
             print(Style.RESET_ALL)
