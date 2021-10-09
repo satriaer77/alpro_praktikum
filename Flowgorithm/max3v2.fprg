@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 10:26:49 AM"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDoxMDo0OSBBTTsyOTU0"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDoyNjo0OSBBTTsyOzMwNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="akg1, akg2, akg3" type="Real" array="False" size=""/>
+            <input variable="akg1"/>
+            <input variable="akg2"/>
+            <input variable="akg3"/>
+            <if expression="akg1&gt;akg2 and akg1&gt;akg3">
+                <then>
+                    <output expression="&quot;Akg1&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="akg2&gt;akg3">
+                        <then>
+                            <output expression="&quot;Akg2&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Akg3&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

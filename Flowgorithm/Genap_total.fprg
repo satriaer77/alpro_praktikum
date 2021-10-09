@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 11:01:28 AM"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDo1NDo0NCBBTTsyOTU3"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMTowMToyOCBBTTsxOzMwNjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="akh, total, i" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <input variable="akh"/>
+            <for variable="i" start="0" end="akh" direction="inc" step="1">
+                <if expression="i%2==0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                        <assign variable="total" expression="total+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Total = &quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

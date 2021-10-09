@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 10:52:23 AM"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDozNDowMyBBTTsyOTUw"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDo1MjoyMyBBTTsyOzMwNjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="karOut, kar, ulang" type="String" array="False" size=""/>
+            <declare name="lanjut" type="Boolean" array="False" size=""/>
+            <assign variable="karOut" expression="&quot;&quot;"/>
+            <assign variable="lanjut" expression="true"/>
+            <while expression="lanjut == true">
+                <input variable="kar"/>
+                <assign variable="karOut" expression="karOut&amp;kar"/>
+                <input variable="ulang"/>
+                <if expression="ulang == &quot;t&quot;">
+                    <then>
+                        <assign variable="lanjut" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <output expression="karOut" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

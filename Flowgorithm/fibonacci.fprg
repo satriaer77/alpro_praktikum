@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 11:15:12 AM"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMTowMTozMSBBTTsyOTQ2"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMToxNToxMiBBTTsxOzMwNTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ak1, ak2, tl, max" type="Integer" array="False" size=""/>
+            <declare name="hst" type="String" array="False" size=""/>
+            <assign variable="ak2" expression="1"/>
+            <assign variable="tl" expression="0"/>
+            <assign variable="hst" expression="&quot;&quot;"/>
+            <input variable="max"/>
+            <for variable="ak1" start="0" end="max" direction="inc" step="1">
+                <assign variable="tl" expression="ak1+ak2"/>
+                <assign variable="ak1" expression="ak2"/>
+                <assign variable="ak2" expression="tl"/>
+                <assign variable="hst" expression="hst&amp;ak1&amp;&quot;,&quot;"/>
+            </for>
+            <output expression="&quot;| &quot;&amp;hst&amp;&quot;|&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

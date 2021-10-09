@@ -1,0 +1,12 @@
+Kelompok Room 4 (ALPRO) <Raihan Fadillah> :
+- Muhammad Muqoffin Nuha
+- Muhammad Raihan Fadillah
+- Bima Satria Erlangga
+- Isnaini Septya
+
+
+Tugas :
++ Print, input, konversi tipe variable
++ If, Elif, Else
++ While, For
++ Semua Operator di Python

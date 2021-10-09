@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 09:57:22 AM"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzswODo1Mzo1NSBBTTsyOTY1"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzswOTo1NzoyMiBBTTszOzMwNzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L, a, t" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="t"/>
+            <assign variable="L" expression="0.5*a*t"/>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <output expression="" newline="True"/>
+        </body>
+    </function>
+    <function name="Ltriangle" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Real" array="False"/>
+            <parameter name="t" type="Real" array="False"/>
+        </parameters>
+        <body/>
+    </function>
+</flowgorithm>

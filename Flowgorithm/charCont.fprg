@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 10:43:19 AM"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDozNDowMyBBTTsyOTUw"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDo0MzoxOSBBTTsyOzMwNjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, jmlKar" type="Integer" array="False" size=""/>
+            <input variable="jmlKar"/>
+            <declare name="karOut, kar" type="String" array="False" size=""/>
+            <assign variable="karOut" expression="&quot;&quot;"/>
+            <for variable="i" start="1" end="jmlKar" direction="inc" step="1">
+                <input variable="kar"/>
+                <assign variable="karOut" expression="karOut&amp;kar"/>
+            </for>
+            <output expression="karOut" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 10:10:46 AM"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDowMjozMiBBTTsyOTQ3"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMC0wNzsxMDoxMDo0NiBBTTsxOzMwNTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="akg" type="Integer" array="False" size=""/>
+            <input variable="akg"/>
+            <if expression="akg%2==1">
+                <then>
+                    <output expression="&quot;Bilangan Ganjil&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Bilangan Genap&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Kabisat" type="Boolean" variable="">
+        <parameters>
+            <parameter name="th" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <input variable="th"/>
+            <if expression="th%4==1">
+                <then>
+                    <output expression="&quot;Bukan Kabisat&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Kabisat&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
