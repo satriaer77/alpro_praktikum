@@ -6,14 +6,13 @@ fileName = ambil dari looping count folder kemudian nama file
 
 """
 n = 1
-path            = Path(str(Path.cwd())+"/")
+path            = Path(str(Path.cwd()))
 exclude         =  ['alpro-env','.git','.gitignore','Flowgorithm','.ipynb_checkpoints','allProject.py','requirements.txt'] 
 
 
 folderProject   = []
 filesProject    = []
-choosenFolder   = str(path)
-
+choosenFolder   = path
 
 for folder in path.iterdir():
     if folder.name not in exclude :
@@ -22,55 +21,54 @@ for folder in path.iterdir():
 
 folderProject.sort()
 
-def printProject(folderList,i) : 
-    for fn in folderList :
+def printProject(listProject,i) :
+    for fn in listProject :
         print(i,'.) ',fn)
         i+=1
 
   
 
 
-def chooseProject(arrFoProj,pathFolder) :
-    try :
-        print("""
-      ---------  Pilih Folder Project ---------
-        """,printProject(arrFoProj),"""
+try :
+    print("---------  Pilih Folder Project ---------") 
+    printProject(folderProject,n)
+    a   = int(input("==> Pilih Project : "))
 
-        """)
-        a               = int(input("==> Pilih Project : "))
-    except :
-        print("Nomor yang anda pilih tidak ada di menu")
-    else :
-        choosenFolder   = pathFolder+""+arrFoProj[a-1]
-        return choosenFolder
+except :
+    print("Nomor yang anda pilih tidak ada di menu")
 
+else :
+    choosenFolder   = Path(str(path)+"/"+folderProject[a-1])
+        
   
-def printFProject(arrFoProj,pathFolder,i) :
-    for filePrj in pathFolder.iterdir():
+    for filePrj in choosenFolder.iterdir():
 
         print(n,".) ",filePrj.name)
         filesProject.append(filePrj.name)
-        i+=1
+        n+=1
 
-def runProject(arrFoProj,pathFolder) :
     try :
         b = int(input("==> Pilih File Project : "))
-        print(arrFoProj[b-1])
+        print(filesProject[b-1])
+
     except : 
         print("Nomor Project yang anda pilih tidak ada dimenu")
         #print(folderProject[a-1])
         #print(pilihFolder)
+
     else :
+        print("""
+        
+        |-------- Menjalankan File | %s | --------| 
+        
+                    
+                    """ % (filesProject[b-1]))
         try : 
-            open(str(pathFolder)+"/"+arrFoProj[b-1]).read()
+            exec(open(str(choosenFolder)+"/"+filesProject[b-1]).read())
+            
         except :
             print("Project yang anda jalankan gagal")
+
         else : 
-            exec(open(str(pathFolder)+"/"+arrFoProj[b-1]).read())
-
-
-chooseProject(folderProject,str(path))
-printFProject(folderProject,Path(choosenFolder),n)
-runProject(filesProject,choosenFolder)
-
+            print("Project Berhasil Dijalankan")
 
