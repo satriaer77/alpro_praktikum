@@ -1,15 +1,29 @@
-data = "aKKKa"
-vokal = ['a','i','u','e','o']
-kata = ["",""]
+data    = input("==> Masukkan Kata/Kalimat : ")
+vokal   = ['a','i','u','e','o']
+kata    = ["",""]
 
-for kont in data :
-    if kont in vokal :
-        kata[0] = kata[0]+" "+kont
+
+for huruf in data :
+    if huruf in vokal :
+        kata[0] = kata[0]+" "+huruf
     
     else:
-        kata[1] = kata[1]+" "+kont
+        kata[1] = kata[1]+" "+huruf
+
+#if 'a' in data :
+#    kata[0] = kata[0]+" "+'a'
 
 
-jmlvokal= len(kata[0].replace(" ",""))
-spasi= kata[0].count(" ")
-print(kata[0]," ",jmlvokal,spasi)
+jmlhuruf    = [len(kata[0].replace(" ","")),len(kata[1].replace(" ",""))]
+spasi       = data.count(" ")       #Jumlah Spasi setiap huruf konsonan dan vokal [kata[0].count(" "),kata[1].count(" ")]
+
+
+#print(kata[0]," ",jmlvokal,spasi)
+
+print("""
+    
+    Jumlah Huruf Vokal      : %s, yaitu : %s
+    Jumlah Huruf Konsonan   : %s, yaitu : %s 
+    Jumlah Spasi            : %d
+
+        """ % (jmlhuruf[0],kata[0],jmlhuruf[1],kata[1],spasi))
