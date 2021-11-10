@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-05 11:14:05 pm"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0wNTsxMTowNjo0NSBwbTszMDM0"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0wNTsxMToxNDowNSBwbTsxOzMxMzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jmlBilangan, total, noBil, bil" type="Integer" array="False" size=""/>
+            <input variable="jmlBilangan"/>
+            <assign variable="total" expression="0"/>
+            <assign variable="noBil" expression="1"/>
+            <assign variable="bil" expression="0"/>
+            <while expression="noBil &lt;= jmlBilangan">
+                <if expression="bil % 2 != 0">
+                    <then>
+                        <output expression="&quot;Bilangan ke- &quot;&amp;noBil&amp;&quot; : &quot;&amp;bil" newline="True"/>
+                        <assign variable="noBil" expression="noBil+1"/>
+                        <assign variable="total" expression="total+bil"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="bil" expression="bil+1"/>
+            </while>
+            <output expression="&quot;Total = &quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

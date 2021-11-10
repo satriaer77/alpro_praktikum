@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-05 11:20:10 pm"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0wNTsxMToxNDo0MCBwbTszMDI4"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0wNTsxMToyMDoxMCBwbTsxOzMxMzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, a, b, un, i" type="Integer" array="False" size=""/>
+            <declare name="sn" type="Real" array="False" size=""/>
+            <input variable="n"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="un" expression="a+(i-1)*b"/>
+                <output expression="&quot;u- &quot;&amp;i&amp;&quot; = &quot;&amp;un" newline="True"/>
+            </for>
+            <assign variable="sn" expression="n/2*(2*a+(n-1)*b)"/>
+            <output expression="&quot;==&gt; Sn = &quot;&amp;sn" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
