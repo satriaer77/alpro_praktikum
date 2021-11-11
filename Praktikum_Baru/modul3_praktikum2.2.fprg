@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-11 01:13:28 am"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0xMDswOTo0MzowMyBwbTszMDMy"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0xMTswMToxMzoyOCBhbTs2OzMxMjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kalimat, huruf" type="String" array="False" size=""/>
+            <declare name="indeks, noHuruf" type="Integer" array="False" size=""/>
+            <assign variable="noHuruf" expression="1"/>
+            <input variable="kalimat"/>
+            <input variable="huruf"/>
+            <for variable="indeks" start="0" end="Len(kalimat)-1" direction="inc" step="1">
+                <if expression="toLower(huruf) == toLower(char(kalimat,indeks))">
+                    <then>
+                        <output expression="&quot;Huruf &quot;&amp;toLower(huruf)&amp;&quot; atau huruf &quot;&amp;toUpper(huruf)&amp;&quot; ke- &quot;&amp;noHuruf&amp;&quot; : offset &quot;&amp;indeks" newline="True"/>
+                        <assign variable="noHuruf" expression="noHuruf+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="toLower" type="String" variable="huruf">
+        <parameters>
+            <parameter name="kata" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="code" type="Integer" array="False" size=""/>
+            <declare name="huruf" type="String" array="False" size=""/>
+            <assign variable="code" expression="ToCode(kata)"/>
+            <if expression="code &gt; 96 AND code &lt; 123">
+                <then>
+                    <assign variable="huruf" expression="ToChar(code)"/>
+                </then>
+                <else>
+                    <assign variable="huruf" expression="ToChar(code+32)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="toUpper" type="String" variable="huruf">
+        <parameters>
+            <parameter name="kata" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="code" type="Integer" array="False" size=""/>
+            <declare name="huruf" type="String" array="False" size=""/>
+            <assign variable="code" expression="ToCode(kata)"/>
+            <if expression="code &gt; 96 AND code &lt; 123">
+                <then>
+                    <assign variable="huruf" expression="ToChar(code-32)"/>
+                </then>
+                <else>
+                    <assign variable="huruf" expression="ToChar(code)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

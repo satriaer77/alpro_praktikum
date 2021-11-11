@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="burrin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-10 10:10:28 pm"/>
+        <attribute name="created" value="YnVycmluO0RFU0tUT1AtNzQ5RDJJRjsyMDIwLTEwLTMxOzExOjEyOjIzIEFNOzI5MTQ="/>
+        <attribute name="edited" value="YnVycmluO0RFU0tUT1AtNzQ5RDJJRjsyMDIwLTEwLTMxOzExOjI5OjM2IEFNOzI7MzAzNQ=="/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0xMDsxMDoxMDoyOCBwbTsyOzMxMzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="uCase" type="String" array="False" size=""/>
+            <declare name="sentence" type="String" array="False" size=""/>
+            <input variable="sentence"/>
+            <assign variable="uCase" expression="toUpper(sentence)"/>
+            <output expression="uCase" newline="True"/>
+        </body>
+    </function>
+    <function name="ToUpper" type="String" variable="uWord">
+        <parameters>
+            <parameter name="lWord" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="letter" type="Integer" array="False" size=""/>
+            <declare name="code" type="Integer" array="False" size=""/>
+            <declare name="uWord" type="String" array="False" size=""/>
+            <assign variable="uWord" expression="&quot;&quot;"/>
+            <for variable="letter" start="0" end="len(lWord)-1" direction="inc" step="1">
+                <assign variable="code" expression="ToCode(Char(lWord,letter))"/>
+                <output expression="code" newline="True"/>
+                <if expression="code &gt;96 AND code &lt;123">
+                    <then>
+                        <assign variable="uWord" expression="uWord &amp; ToChar(code)"/>
+                    </then>
+                    <else>
+                        <assign variable="code" expression="ToCode(Char(lWord,letter))+32"/>
+                        <assign variable="uWord" expression="uWord &amp; ToChar(code)"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

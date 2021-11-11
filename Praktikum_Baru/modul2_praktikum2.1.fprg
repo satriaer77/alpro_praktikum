@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-11 01:13:09 am"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0xMTsxMjozOTowNCBhbTszMDE4"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0xMTswMToxMzowOSBhbTszOzMxMjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil, i, faktorPembagi" type="Integer" array="False" size=""/>
+            <declare name="prime" type="Boolean" array="False" size=""/>
+            <input variable="bil"/>
+            <assign variable="prime" expression="True"/>
+            <assign variable="faktorPembagi" expression="0"/>
+            <if expression="bil &gt; 1">
+                <then>
+                    <for variable="i" start="2" end="bil-1" direction="inc" step="1">
+                        <if expression="bil%i == 0">
+                            <then>
+                                <assign variable="prime" expression="False"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <if expression="prime">
+                        <then>
+                            <output expression="bil&amp;&quot; Adalah Bilangan Prima&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="bil&amp;&quot; Adalah Bukan Bilangan Prima&quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <for variable="i" start="1" end="bil" direction="inc" step="1">
+                        <if expression="bil%i == 0">
+                            <then>
+                                <assign variable="faktorPembagi" expression="faktorPembagi+1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <output expression="&quot;, memiliki jumlah faktor pembagi &quot;&amp;faktorPembagi" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
