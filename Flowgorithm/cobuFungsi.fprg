@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-18 11:52:00 am"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0xODsxMDowODo0OCBhbTszMDI3"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0xODsxMTo1MjowMCBhbTsxOzMxMjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kata" type="String" array="False" size=""/>
+            <declare name="akg1, akg2" type="Integer" array="False" size=""/>
+            <input variable="kata"/>
+            <input variable="akg1"/>
+            <input variable="akg2"/>
+            <call expression="show(kata)"/>
+            <output expression="jmlAkg(akg1,akg2)" newline="True"/>
+            <call expression="ganjil(jmlAkg(akg1,akg2))"/>
+        </body>
+    </function>
+    <function name="ganjil" type="None" variable="">
+        <parameters>
+            <parameter name="hasil" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="hasil%2==0">
+                <then>
+                    <output expression="hasil&amp;&quot; adalah bilangan Genap&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="hasil&amp;&quot; adalah bilangan Ganjil&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="jmlAkg" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="ak1" type="Integer" array="False"/>
+            <parameter name="ak2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <assign variable="hasil" expression="ak1*ak2"/>
+        </body>
+    </function>
+    <function name="show" type="None" variable="">
+        <parameters>
+            <parameter name="kt" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="kt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
