@@ -7,7 +7,7 @@ fileName = ambil dari looping count folder kemudian nama file
 """
 n = 1
 path            = Path(str(Path.cwd()))
-exclude         =  ['alpro-env','.git','.gitignore','Flowgorithm','.ipynb_checkpoints','allProject.py','requirements.txt'] 
+exclude         =  ['alpro-env','.git','.gitignore','Flowgorithm','.ipynb_checkpoints','allProject.py','requirements.txt']
 
 
 folderProject   = []
@@ -19,6 +19,13 @@ for folder in path.iterdir():
        folderProject.append(folder.name)
 
 
+
+def showProject() :
+    listFolder = []
+    for folder in path.iterdir():
+        if folder.name not in exclude :
+           listFolder.append(folder.name)
+
 folderProject.sort()
 
 def printProject(listProject,i) :
@@ -26,11 +33,10 @@ def printProject(listProject,i) :
         print(i,'.) ',fn)
         i+=1
 
-  
 
 
 try :
-    print("---------  Pilih Folder Project ---------") 
+    print("---------  Pilih Folder Project ---------")
     printProject(folderProject,n)
     a   = int(input("==> Pilih Project : "))
 
@@ -39,8 +45,8 @@ except :
 
 else :
     choosenFolder   = Path(str(path)+"/"+folderProject[a-1])
-        
-  
+
+
     for filePrj in choosenFolder.iterdir():
 
         print(n,".) ",filePrj.name)
@@ -51,24 +57,23 @@ else :
         b = int(input("==> Pilih File Project : "))
         print(filesProject[b-1])
 
-    except : 
+    except :
         print("Nomor Project yang anda pilih tidak ada dimenu")
         #print(folderProject[a-1])
         #print(pilihFolder)
 
     else :
         print("""
-        
-        |-------- Menjalankan File | %s | --------| 
-        
-                    
+
+        |-------- Menjalankan File | %s | --------|
+
+
                     """ % (filesProject[b-1]))
-        try : 
+        try :
             exec(open(str(choosenFolder)+"/"+filesProject[b-1]).read())
-            
+
         except :
             print("Project yang anda jalankan gagal")
 
-        else : 
+        else :
             print("Project Berhasil Dijalankan")
-

@@ -1,0 +1,19 @@
+mkdir 085_Satria #point a
+cd folder_yangkamu buat tadi
+
+vim identitas.txt #nanti ini langsung ke text/code editor kalau aku pakai vim biasanya semua terminal punya nano,vim lebih mudah nano
+
+cp identitas.txt namaTerserah.txt #point c
+
+mkdir 085_Satria_baru
+
+mv duplikasiFiletadi folder_baru
+
+cd folder_baru
+
+vim Praktikum\ PTI\ A.txt #point g
+
+cd ~ #kembali ke home
+
+rm -r 085_Satria #hapus folder yang pertama kamu buat fungsi flag -r untuk penghapusan rekursif
+

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="bimasatria"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-24 07:06:13 pm"/>
+        <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0yNDswNjozNDozOCBwbTszMDQy"/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0yNDswNzowNjoxMyBwbTsxOzMxNDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="data1, data2, hasil" type="Integer" array="True" size="6"/>
+            <declare name="rata1, rata2" type="Real" array="False" size=""/>
+            <assign variable="data1" expression="createList(6)"/>
+            <output expression="&quot;Data - 1 = ,Rata-rata List = &quot;&amp;avgList(data1)" newline="True"/>
+            <assign variable="data2" expression="createList(6)"/>
+            <output expression="&quot;Data - 2 = &quot;&amp;data2&amp;&quot;, Rata-rata List = &quot;&amp;avgList(data2)" newline="True"/>
+            <assign variable="hasil" expression="addList(data1,data2)"/>
+            <output expression="data1&amp;&quot; + &quot;&amp;data2&amp;&quot; = &quot;&amp;hasil" newline="True"/>
+        </body>
+    </function>
+    <function name="addList" type="Real" variable="result">
+        <parameters>
+            <parameter name="list1" type="Integer" array="True"/>
+            <parameter name="list2" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="True" size="6"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <assign variable="result[i]" expression="list1[i]+list2[i]"/>
+            </for>
+        </body>
+    </function>
+    <function name="avgList" type="Real" variable="">
+        <parameters>
+            <parameter name="numsList" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="numsList" type="Integer" array="True" size="6"/>
+            <declare name="total, i" type="Integer" array="False" size=""/>
+            <declare name="rataRata" type="Real" array="False" size=""/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <assign variable="total" expression="total = total+numsList[i]"/>
+            </for>
+            <assign variable="rataRata" expression="total/len(numsList)"/>
+        </body>
+    </function>
+    <function name="createList" type="None" variable="numsList[6]">
+        <parameters>
+            <parameter name="lenList" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="numsList" type="Integer" array="True" size="6"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <input variable="numsList[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

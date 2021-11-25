@@ -7,7 +7,7 @@ jmlList1 = int(input("==> Masukkan jumlah list1 : "))
 jmlList2 = int(input("==> Masukkan jumlah list2 : "))
 
 
-for i in range(jmlList1) : 
+for i in range(jmlList1) :
     list1.append(int(input("==> Masukkan data angka 1 : ")))
 
 for i in range(jmlList2) :
@@ -20,7 +20,7 @@ if len(list1) > len(list2) :
             list3.append(list1[i]+list2[i])
         else :
             list3.append(list1[i])
-    
+
 else :
     for i in range(len(list2)) :
         if i < len(list1) :
