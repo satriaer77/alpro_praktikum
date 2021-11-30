@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="bimasatria"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-11-24 07:06:13 pm"/>
+        <attribute name="saved" value="2021-11-26 04:30:54 am"/>
         <attribute name="created" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0yNDswNjozNDozOCBwbTszMDQy"/>
-        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0yNDswNzowNjoxMyBwbTsxOzMxNDM="/>
+        <attribute name="edited" value="YmltYXNhdHJpYTtTQVRSSUEtUEM7MjAyMS0xMS0yNjswNDozMDo1NCBhbTsyOzMxMzA="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -55,7 +55,7 @@
         <body>
             <declare name="numsList" type="Integer" array="True" size="6"/>
             <declare name="i" type="Integer" array="False" size=""/>
-            <for variable="i" start="0" end="5" direction="inc" step="1">
+            <for variable="i" start="0" end="lenList" direction="inc" step="1">
                 <input variable="numsList[i]"/>
             </for>
         </body>

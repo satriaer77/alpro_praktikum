@@ -15,7 +15,7 @@ for i in range(len(subab)) :
     subab[i] = subab[i].split(",") #Membagi string menjadi potongan list sesuai argument yang dimasukkan
 
 
-#Menampilkan isi list bab dan bab
+#Menampilkan isi list bab dan subbab
 for i in range(len(bab)) :
     
     print("\nBAB %d : %s " %(i+1,bab[i])) #Menapmilkan BAB
