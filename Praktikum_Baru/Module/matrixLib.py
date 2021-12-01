@@ -64,4 +64,3 @@ class Matrix :
             print("'Ordo matrix tidak sama'")
 
 
-matrix = Matrix()
