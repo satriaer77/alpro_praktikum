@@ -1,4 +1,6 @@
 class Matrix :
+
+    @staticmethod
     def createMatrix2D(baris,kolom) :
         matrix = []
         for i in range(baris) :
@@ -12,7 +14,7 @@ class Matrix :
 
 
 
-
+    @staticmethod
     def dispMatrix2D(listMatrix) :
         strMatrix = ""
         pjgMax    = 0
@@ -36,7 +38,7 @@ class Matrix :
         return strMatrix
     
     
-    
+    @staticmethod
     def isSquare(listMatrix) :
         square = True
         if len(listMatrix) != len(listMatrix[0]) :
@@ -44,7 +46,8 @@ class Matrix :
     
         return square
     
-    
+
+    @staticmethod
     def addList(listMatrix1,listMatrix2) :
         pjgBaris = len(listMatrix1) == len(listMatrix2)
         pjgKolom = len(listMatrix1[0]) == len(listMatrix2[0])
