@@ -1,4 +1,4 @@
-class matrix :
+class Matrix :
     def createMatrix2D(baris,kolom) :
         matrix = []
         for i in range(baris) :
@@ -62,4 +62,6 @@ class matrix :
     
         else :
             print("'Ordo matrix tidak sama'")
-    
+
+
+matrix = Matrix()
