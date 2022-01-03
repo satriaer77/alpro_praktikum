@@ -21,6 +21,20 @@ def fibonacciv2(akg,a1,a2,a3) :
         fib = a1+a2
         
 
+def fibbonacci(n) :
+    a = 0
+    b = 1
+    s=[]
+    
+    for i in range(n) :
+        s.append(a)
+        c = a + b
+        a = b
+        b = c
+        
+    return s
+
+print(fibbonacci(10))
 
 
 try:
